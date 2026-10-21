@@ -10,13 +10,13 @@ nav { display: flex; align-items: center; gap: 36px; padding-top: 22px; }
 nav a { color: #222; text-decoration: none; font-family: "Cinzel", serif; font-size: 12px; letter-spacing: .15em; }
 .menu { width: 26px; height: 10px; border-top: 1px solid #222; border-bottom: 1px solid #222; margin-left: 12px; }
 
-.profile { max-width: 1100px; margin: 0 auto; padding: 174px 6vw 100px; }
+.profile { max-width: 1400px; margin: 0 auto; padding: 174px 5vw 120px; }
 .profile-back { display: inline-block; margin-bottom: 34px; color: #88837d; text-decoration: none;
                 font-family: "Cinzel", serif; font-size: 11px; letter-spacing: .18em; transition: color .3s; }
 .profile-back:hover { color: #171717; }
 .profile-kicker { color: #8b6b58; font-family: "Cinzel", serif; font-size: 11px; letter-spacing: .22em; margin-bottom: 42px; }
 
-.profile-main { display: grid; grid-template-columns: 360px 1fr; gap: 80px; align-items: start; }
+.profile-main { display: grid; grid-template-columns: 460px 1fr; gap: 100px; align-items: start; }
 .profile-photo { overflow: hidden; aspect-ratio: 3 / 4; background: #f0efec; }
 .profile-photo img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: center top; }
 .profile-name { padding-top: 8px; }
@@ -28,7 +28,7 @@ nav a { color: #222; text-decoration: none; font-family: "Cinzel", serif; font-s
 .profile-table .row dt { width: 88px; flex-shrink: 0; color: #999; }
 .profile-table .row dd { color: #333; }
 
-.filmography { margin-top: 96px; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 56px; }
+.filmography { margin-top: 110px; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 72px; }
 .film h2 { padding-bottom: 16px; border-bottom: 1px solid #222; margin-bottom: 28px;
            font-size: 19px; font-weight: 700; letter-spacing: .06em; }
 .film ul { list-style: none; }
@@ -46,7 +46,7 @@ nav a { color: #222; text-decoration: none; font-family: "Cinzel", serif; font-s
 .profile-gallery { margin-top: 96px; }
 .profile-gallery h2 { padding-bottom: 16px; border-bottom: 1px solid #222; margin-bottom: 28px;
                       font-size: 19px; font-weight: 700; letter-spacing: .06em; }
-.gallery-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; }
+.gallery-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 28px; }
 .gallery-grid .shot { overflow: hidden; aspect-ratio: 4 / 5; background: #f0efec; padding: 0; border: 0; cursor: zoom-in; }
 .gallery-grid .shot img { display: block; width: 100%; height: 100%; object-fit: cover;
                            transition: transform .7s cubic-bezier(.2,.65,.3,1); }
