@@ -42,8 +42,30 @@
 
   html { scroll-behavior: smooth; }
   .artists { display: none; min-height: 100vh; padding: 174px 7vw 128px; background: #f5f4f1; color: #171717; }
+  .about { display: none; min-height: 100vh; padding: 174px 7vw 128px; background: #f5f4f1; color: #171717; }
   body.show-artists .hero { display: none; }
   body.show-artists .artists { display: block; }
+  body.show-about .hero { display: none; }
+  body.show-about .about { display: block; }
+  .about-inner { max-width: 1100px; margin: 0 auto; }
+  .about-heading { margin-bottom: 72px; }
+  .about-heading h2 { margin-top: 12px; font-family: "Cormorant Garamond", serif; font-size: clamp(48px, 7vw, 86px); font-weight: 400; line-height: .95; }
+  .about-kicker { color: #8b6b58; font-family: "Cinzel", serif; font-size: 11px; letter-spacing: .22em; }
+  .about-lead { padding-bottom: 56px; border-bottom: 1px solid #d7d4ce; }
+  .about-lead h3 { font-family: "Cormorant Garamond", serif; font-size: clamp(30px, 4vw, 44px); font-weight: 500; line-height: 1.25; }
+  .about-lead .ko-lead { margin-top: 18px; font-size: 16px; font-weight: 500; color: #444; }
+  .about-lead .ko-body { margin-top: 20px; max-width: 640px; color: #706d69; font-size: 14px; line-height: 2; }
+  .about-block { margin-top: 64px; }
+  .about-block-label { color: #8b6b58; font-family: "Cinzel", serif; font-size: 11px; letter-spacing: .22em; margin-bottom: 14px; }
+  .about-block h3 { font-family: "Cormorant Garamond", serif; font-size: clamp(30px, 3.6vw, 40px); font-weight: 500; }
+  .about-card { margin-top: 26px; background: #e9e7e2; padding: 44px 40px; }
+  .about-card p { color: #55524d; font-size: 14px; line-height: 2; }
+  .about-map { margin-top: 26px; display: block; height: 380px; background: #e0deda; border: 0; overflow: hidden; }
+  .about-map iframe { display: block; width: 100%; height: 100%; border: 0; filter: grayscale(100%); }
+  .about-address { margin-top: 28px; display: flex; justify-content: space-between; align-items: flex-start; gap: 24px; flex-wrap: wrap; }
+  .about-address h4 { font-family: "Cinzel", serif; font-size: 14px; font-weight: 500; letter-spacing: .1em; margin-bottom: 8px; }
+  .about-address p { color: #706d69; font-size: 13px; line-height: 1.9; }
+  .about-address .arrow { font-size: 20px; color: #88837d; }
   .artists-inner { max-width: 1320px; margin: 0 auto; }
   .artists-heading { display: flex; justify-content: space-between; align-items: flex-end; gap: 30px; margin-bottom: 48px; }
   .artists-kicker { color: #8b6b58; font-family: "Cinzel", serif; font-size: 11px; letter-spacing: .22em; }
@@ -75,7 +97,7 @@
     header { padding: 14px 18px; }
     header .logo img { height: 60px; }
     nav a { display: none; }
-    nav a[href="#artists"] { display: inline-block; }
+    nav a[href="#artists"], nav a[href="#about"] { display: inline-block; }
     nav { gap: 12px; padding-top: 12px; }
     .site-footer { padding: 36px 22px 30px; }
     .footer-brand { align-items: flex-start; gap: 16px; margin-bottom: 22px; }
@@ -83,6 +105,12 @@
     .footer-brand h2 { padding-top: 12px; font-size: 16px; }
     .footer-details { font-size: 12px; }
     .artists { padding: 128px 22px 84px; }
+    .about { padding: 128px 22px 84px; }
+    .about-heading { margin-bottom: 44px; }
+    .about-heading h2 { font-size: 52px; }
+    .about-lead { padding-bottom: 40px; }
+    .about-card { padding: 30px 24px; }
+    .about-map { height: 260px; }
     .artists-heading { display: block; margin-bottom: 30px; }
     .artists-heading h2 { font-size: 58px; }
     .artists-intro { margin-top: 18px; font-size: 12px; }
@@ -140,6 +168,40 @@
     </div>
   </div>
 </section>
+<section class="about" id="about" aria-labelledby="about-title">
+  <div class="about-inner">
+    <div class="about-heading">
+      <div class="about-kicker">PROLOGUE / ABOUT</div>
+      <h2 id="about-title">About Us</h2>
+    </div>
+    <div class="about-lead">
+      <h3>Every story begins with a prologue.</h3>
+      <p class="ko-lead">모든 이야기는 프롤로그에서 시작됩니다.</p>
+      <p class="ko-body">PROLOGUE COMPANY는 배우 고유의 색과 가능성을 발견하고, 각자의 이야기가 작품 속에서 빛날 수 있도록 함께하는 배우 매니지먼트입니다.</p>
+    </div>
+    <div class="about-block">
+      <div class="about-block-label">01 / OUR PHILOSOPHY</div>
+      <h3>Beyond the Frame.</h3>
+      <div class="about-card">
+        <p>배우의 가능성을 하나의 이미지에 가두지 않습니다. 서로 다른 개성과 시선을 존중하며 더 넓은 무대로 연결합니다.</p>
+      </div>
+    </div>
+    <div class="about-block">
+      <div class="about-block-label">02 / LOCATION</div>
+      <h3>Visit Us</h3>
+      <div class="about-map">
+        <iframe src="https://www.google.com/maps?q=%EC%84%9C%EC%9A%B8%20%EB%A7%88%ED%8F%AC%EA%B5%AC%20%EB%A7%A4%EB%B4%89%EC%82%B0%EB%A1%9C%2072&z=16&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="PROLOGUE COMPANY 위치 - 서울 마포구 매봉산로 72" allowfullscreen></iframe>
+      </div>
+      <div class="about-address">
+        <div>
+          <h4>PROLOGUE COMPANY</h4>
+          <p>서울 마포구 매봉산로 72 2,3층<br>prologueent.gmail.com</p>
+        </div>
+        <span class="arrow">&#8599;</span>
+      </div>
+    </div>
+  </div>
+</section>
 <footer class="site-footer">
   <div class="footer-inner">
     <div class="footer-brand">
@@ -156,12 +218,14 @@
 </footer>
 <script>
   const artistsLink = document.querySelector('nav a[href="#artists"]');
+  const aboutLink = document.querySelector('nav a[href="#about"]');
   const homeLink = document.querySelector('header .logo');
 
   function setView(view, updateHistory = true) {
-    const showArtists = view === 'artists';
-    document.body.classList.toggle('show-artists', showArtists);
-    if (updateHistory) history.pushState({ view }, '', showArtists ? '#artists' : '#home');
+    document.body.classList.toggle('show-artists', view === 'artists');
+    document.body.classList.toggle('show-about', view === 'about');
+    const hash = view === 'artists' ? '#artists' : view === 'about' ? '#about' : '#home';
+    if (updateHistory) history.pushState({ view }, '', hash);
     window.scrollTo(0, 0);
   }
 
@@ -170,16 +234,22 @@
     setView('artists');
   });
 
+  aboutLink.addEventListener('click', event => {
+    event.preventDefault();
+    setView('about');
+  });
+
   homeLink.addEventListener('click', event => {
     event.preventDefault();
     setView('home');
   });
 
   window.addEventListener('popstate', () => {
-    setView(location.hash === '#artists' ? 'artists' : 'home', false);
+    setView(location.hash === '#artists' ? 'artists' : location.hash === '#about' ? 'about' : 'home', false);
   });
 
   if (location.hash === '#artists') setView('artists', false);
+  else if (location.hash === '#about') setView('about', false);
 </script>
 </body>
 </html>
