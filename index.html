@@ -49,7 +49,7 @@
   .artists-heading h2 { margin-top: 12px; font-family: "Cormorant Garamond", serif; font-size: clamp(48px, 7vw, 86px); font-weight: 400; line-height: .95; }
   .artists-intro { max-width: 250px; padding-bottom: 5px; color: #706d69; font-family: "Noto Sans KR", sans-serif; font-size: 13px; line-height: 1.9; }
   .artist-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; }
-  .artist { min-width: 0; }
+  .artist { min-width: 0; display: block; color: inherit; text-decoration: none; }
   .artist-image { overflow: hidden; aspect-ratio: 4 / 5; background: #e5e3df; }
   .artist-image img { display: block; width: 100%; height: 100%; object-fit: cover; transition: transform .7s cubic-bezier(.2,.65,.3,1); }
   .artist:first-child .artist-image img { object-position: center 32%; }
@@ -124,18 +124,18 @@
       <p class="artists-intro">각자의 분위기와 이야기를 지닌<br>프로로그의 배우들을 소개합니다.</p>
     </div>
     <div class="artist-grid">
-      <article class="artist">
+      <a class="artist" href="cheon.html" aria-label="천양길 프로필 보기">
         <div class="artist-image"><img src="cheon1.jpg" alt="천양길 배우 프로필"></div>
         <div class="artist-caption"><h3>천양길</h3><span>01 / ACTOR</span></div>
-      </article>
-      <article class="artist">
+      </a>
+      <a class="artist" href="moon.html" aria-label="문혜린 프로필 보기">
         <div class="artist-image"><img src="moon1.jpg" alt="문혜린 배우 프로필"></div>
         <div class="artist-caption"><h3>문혜린</h3><span>02 / ACTOR</span></div>
-      </article>
-      <article class="artist">
+      </a>
+      <a class="artist" href="shin.html" aria-label="신비 프로필 보기">
         <div class="artist-image"><img src="shin1.png" alt="신비 배우 프로필"></div>
         <div class="artist-caption"><h3>신비</h3><span>03 / ACTOR</span></div>
-      </article>
+      </a>
     </div>
   </div>
 </section>
