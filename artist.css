@@ -47,10 +47,21 @@ nav a { color: #222; text-decoration: none; font-family: "Cinzel", serif; font-s
 .profile-gallery h2 { padding-bottom: 16px; border-bottom: 1px solid #222; margin-bottom: 28px;
                       font-size: 19px; font-weight: 700; letter-spacing: .06em; }
 .gallery-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; }
-.gallery-grid .shot { overflow: hidden; aspect-ratio: 4 / 5; background: #f0efec; }
+.gallery-grid .shot { overflow: hidden; aspect-ratio: 4 / 5; background: #f0efec; padding: 0; border: 0; cursor: zoom-in; }
 .gallery-grid .shot img { display: block; width: 100%; height: 100%; object-fit: cover;
                            transition: transform .7s cubic-bezier(.2,.65,.3,1); }
 .gallery-grid .shot:hover img { transform: scale(1.035); }
+
+.lightbox { position: fixed; inset: 0; z-index: 100; display: flex; align-items: center; justify-content: center;
+            background: rgba(0,0,0,.88); opacity: 0; visibility: hidden; transition: opacity .3s, visibility .3s; cursor: zoom-out; }
+.lightbox.open { opacity: 1; visibility: visible; }
+.lightbox img { max-width: 88vw; max-height: 88vh; object-fit: contain; box-shadow: 0 8px 40px rgba(0,0,0,.5);
+                transform: scale(.96); transition: transform .3s; cursor: default; }
+.lightbox.open img { transform: scale(1); }
+.lightbox-close { position: absolute; top: 26px; right: 34px; background: none; border: 0; color: #fff;
+                  font-size: 34px; line-height: 1; cursor: pointer; font-family: inherit; opacity: .8; }
+.lightbox-close:hover { opacity: 1; }
+body.lightbox-open { overflow: hidden; }
 
 .site-footer { background: #303030; color: #fff; padding: 48px 24px 38px; }
 .footer-inner { width: min(960px, 100%); margin: 0 auto; }

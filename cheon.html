@@ -66,12 +66,16 @@
   <div class="profile-gallery">
     <h2>PHOTOS</h2>
     <div class="gallery-grid">
-      <div class="shot"><img src="cheon2.jpg" alt="천양길 배우 사진 2" style="object-position: center 20%;"></div>
-      <div class="shot"><img src="cheon3.jpg" alt="천양길 배우 사진 3"></div>
-      <div class="shot"><img src="cheon4.jpg" alt="천양길 배우 사진 4"></div>
+      <button type="button" class="shot" data-full="cheon2.jpg" aria-label="천양길 사진 크게 보기"><img src="cheon2.jpg" alt="천양길 배우 사진 2" style="object-position: center 20%;"></button>
+      <button type="button" class="shot" data-full="cheon3.jpg" aria-label="천양길 사진 크게 보기"><img src="cheon3.jpg" alt="천양길 배우 사진 3"></button>
+      <button type="button" class="shot" data-full="cheon4.jpg" aria-label="천양길 사진 크게 보기"><img src="cheon4.jpg" alt="천양길 배우 사진 4"></button>
     </div>
   </div>
 </main>
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="사진 크게 보기">
+  <button type="button" class="lightbox-close" aria-label="닫기">&times;</button>
+  <img src="" alt="">
+</div>
 <footer class="site-footer">
   <div class="footer-inner">
     <div class="footer-brand">
@@ -86,5 +90,27 @@
     <div class="footer-copyright">COPYRIGHT © 2026 MANAGEMENT PROLOGUE. ALL RIGHTS RESERVED.</div>
   </div>
 </footer>
+<script>
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImg = lightbox.querySelector('img');
+  document.querySelectorAll('.gallery-grid .shot').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const img = btn.querySelector('img');
+      lightboxImg.src = btn.dataset.full;
+      lightboxImg.alt = img.alt;
+      lightbox.classList.add('open');
+      document.body.classList.add('lightbox-open');
+    });
+  });
+  function closeLightbox() {
+    lightbox.classList.remove('open');
+    document.body.classList.remove('lightbox-open');
+  }
+  lightbox.addEventListener('click', closeLightbox);
+  lightboxImg.addEventListener('click', event => event.stopPropagation());
+  window.addEventListener('keydown', event => {
+    if (event.key === 'Escape') closeLightbox();
+  });
+</script>
 </body>
 </html>
