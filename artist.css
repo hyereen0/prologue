@@ -28,17 +28,16 @@ nav a { color: #222; text-decoration: none; font-family: "Cinzel", serif; font-s
 .profile-table .row dt { width: 88px; flex-shrink: 0; color: #999; }
 .profile-table .row dd { color: #333; }
 
-.filmography { margin-top: 56px; }
-.film + .film { margin-top: 44px; }
-.film h2 { padding-bottom: 14px; border-bottom: 1px solid #222; margin-bottom: 24px;
-           font-size: 17px; font-weight: 700; letter-spacing: .06em; }
+.filmography { margin-top: 96px; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 56px; }
+.film h2 { padding-bottom: 16px; border-bottom: 1px solid #222; margin-bottom: 28px;
+           font-size: 19px; font-weight: 700; letter-spacing: .06em; }
 .film ul { list-style: none; }
 .film li { display: flex; gap: 22px; margin-bottom: 13px; font-size: 14px; }
 .film .year { width: 42px; flex-shrink: 0; font-weight: 700; }
 .film .work { color: #555; line-height: 1.65; }
 .film .empty { color: #bbb; font-size: 13px; }
 
-.profile-contact { margin-top: 56px; padding-top: 28px; border-top: 1px solid #e0ddd7;
+.profile-contact { margin-top: 80px; padding-top: 28px; border-top: 1px solid #e0ddd7;
                    display: flex; gap: 72px; flex-wrap: wrap; }
 .contact-item h2 { font-size: 13px; font-weight: 700; letter-spacing: .1em; margin-bottom: 8px; }
 .contact-item a, .contact-item p { color: #555; font-size: 14px; text-decoration: none; }
@@ -64,8 +63,8 @@ nav a { color: #222; text-decoration: none; font-family: "Cinzel", serif; font-s
   .profile-main { grid-template-columns: 1fr; gap: 40px; }
   .profile-photo { max-width: 420px; }
   .profile-name h1 { font-size: 28px; }
-  .filmography { margin-top: 48px; }
-  .profile-contact { gap: 32px; margin-top: 48px; }
+  .filmography { grid-template-columns: 1fr; gap: 46px; margin-top: 64px; }
+  .profile-contact { gap: 32px; margin-top: 56px; }
   .site-footer { padding: 36px 22px 30px; }
   .footer-brand { align-items: flex-start; gap: 16px; margin-bottom: 22px; }
   .footer-brand img { width: 86px; height: 58px; }
