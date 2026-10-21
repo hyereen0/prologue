@@ -47,6 +47,8 @@
   body.show-artists .artists { display: block; }
   body.show-about .hero { display: none; }
   body.show-about .about { display: block; }
+  body.show-contact .hero { display: none; }
+  body.show-contact .contact { display: block; }
   .about-inner { max-width: 1100px; margin: 0 auto; }
   .about-heading { margin-bottom: 72px; }
   .about-heading h2 { margin-top: 12px; font-family: "Cormorant Garamond", serif; font-size: clamp(48px, 7vw, 86px); font-weight: 400; line-height: .95; }
@@ -66,6 +68,24 @@
   .about-address h4 { font-family: "Cinzel", serif; font-size: 14px; font-weight: 500; letter-spacing: .1em; margin-bottom: 8px; }
   .about-address p { color: #706d69; font-size: 13px; line-height: 1.9; }
   .about-address .arrow { font-size: 20px; color: #88837d; }
+
+  .contact { display: none; min-height: 100vh; padding: 174px 7vw 128px; background: #f5f4f1; color: #171717; }
+  .contact-inner { max-width: 1100px; margin: 0 auto; }
+  .contact-heading { margin-bottom: 26px; }
+  .contact-kicker { color: #8b6b58; font-family: "Cinzel", serif; font-size: 11px; letter-spacing: .22em; }
+  .contact-heading h2 { margin-top: 12px; font-family: "Cormorant Garamond", serif; font-size: clamp(48px, 7vw, 86px); font-weight: 400; line-height: .95; }
+  .contact-sub { color: #706d69; font-size: 15px; margin-bottom: 64px; }
+  .contact-block { border-top: 1px solid #d7d4ce; padding-top: 64px; }
+  .contact-block-label { color: #8b6b58; font-family: "Cinzel", serif; font-size: 11px; letter-spacing: .22em; margin-bottom: 20px; }
+  .contact-block h3 { font-family: "Cormorant Garamond", serif; font-size: clamp(32px, 4vw, 48px); font-weight: 500; }
+  .contact-block .desc { margin-top: 16px; color: #706d69; font-size: 14px; line-height: 1.9; }
+  .contact-methods { margin-top: 56px; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 40px; padding-bottom: 72px; border-bottom: 1px solid #d7d4ce; }
+  .contact-method .label { color: #8b6b58; font-family: "Cinzel", serif; font-size: 11px; letter-spacing: .22em; margin-bottom: 14px; }
+  .contact-method a { font-family: "Cormorant Garamond", serif; font-size: clamp(26px, 3vw, 38px); color: #171717; text-decoration: none; border-bottom: 1px solid transparent; transition: border-color .3s; }
+  .contact-method a:hover { border-color: #171717; }
+  .contact-footer { display: flex; justify-content: space-between; align-items: center; gap: 20px; padding-top: 28px; flex-wrap: wrap; }
+  .contact-footer .brand { font-family: "Cinzel", serif; font-size: 13px; letter-spacing: .12em; }
+  .contact-footer .copy { color: #9a978f; font-family: "Cinzel", serif; font-size: 11px; letter-spacing: .08em; }
   .artists-inner { max-width: 1320px; margin: 0 auto; }
   .artists-heading { display: flex; justify-content: space-between; align-items: flex-end; gap: 30px; margin-bottom: 48px; }
   .artists-kicker { color: #8b6b58; font-family: "Cinzel", serif; font-size: 11px; letter-spacing: .22em; }
@@ -97,7 +117,7 @@
     header { padding: 14px 18px; }
     header .logo img { height: 60px; }
     nav a { display: none; }
-    nav a[href="#artists"], nav a[href="#about"] { display: inline-block; }
+    nav a[href="#artists"], nav a[href="#about"], nav a[href="#contact"] { display: inline-block; }
     nav { gap: 12px; padding-top: 12px; }
     .site-footer { padding: 36px 22px 30px; }
     .footer-brand { align-items: flex-start; gap: 16px; margin-bottom: 22px; }
@@ -111,6 +131,11 @@
     .about-lead { padding-bottom: 40px; }
     .about-card { padding: 30px 24px; }
     .about-map { height: 260px; }
+    .contact { padding: 128px 22px 84px; }
+    .contact-heading h2 { font-size: 52px; }
+    .contact-sub { margin-bottom: 44px; }
+    .contact-block { padding-top: 44px; }
+    .contact-methods { grid-template-columns: 1fr; gap: 34px; margin-top: 44px; padding-bottom: 52px; }
     .artists-heading { display: block; margin-bottom: 30px; }
     .artists-heading h2 { font-size: 58px; }
     .artists-intro { margin-top: 18px; font-size: 12px; }
@@ -201,6 +226,34 @@
     </div>
   </div>
 </section>
+<section class="contact" id="contact" aria-labelledby="contact-title">
+  <div class="contact-inner">
+    <div class="contact-heading">
+      <div class="contact-kicker">PROLOGUE / CONTACT</div>
+      <h2 id="contact-title">Contact</h2>
+    </div>
+    <p class="contact-sub">새로운 이야기의 시작, 프로로그와 함께하세요.</p>
+    <div class="contact-block">
+      <div class="contact-block-label">01 / BUSINESS INQUIRY</div>
+      <h3>Get in Touch.</h3>
+      <p class="desc">배우 캐스팅, 광고, 작품 및 비즈니스 협업에 관한 문의를 기다립니다.</p>
+      <div class="contact-methods">
+        <div class="contact-method">
+          <div class="label">EMAIL</div>
+          <a href="mailto:prologueent@gmail.com">prologueent@gmail.com</a>
+        </div>
+        <div class="contact-method">
+          <div class="label">TELEPHONE</div>
+          <a href="tel:010-9352-1163">010-9352-1163</a>
+        </div>
+      </div>
+      <div class="contact-footer">
+        <span class="brand">PROLOGUE COMPANY</span>
+        <span class="copy">© PROLOGUE. ALL RIGHTS RESERVED.</span>
+      </div>
+    </div>
+  </div>
+</section>
 <footer class="site-footer">
   <div class="footer-inner">
     <div class="footer-brand">
@@ -218,12 +271,14 @@
 <script>
   const artistsLink = document.querySelector('nav a[href="#artists"]');
   const aboutLink = document.querySelector('nav a[href="#about"]');
+  const contactLink = document.querySelector('nav a[href="#contact"]');
   const homeLink = document.querySelector('header .logo');
 
   function setView(view, updateHistory = true) {
     document.body.classList.toggle('show-artists', view === 'artists');
     document.body.classList.toggle('show-about', view === 'about');
-    const hash = view === 'artists' ? '#artists' : view === 'about' ? '#about' : '#home';
+    document.body.classList.toggle('show-contact', view === 'contact');
+    const hash = ['artists', 'about', 'contact'].includes(view) ? '#' + view : '#home';
     if (updateHistory) history.pushState({ view }, '', hash);
     window.scrollTo(0, 0);
   }
@@ -238,17 +293,23 @@
     setView('about');
   });
 
+  contactLink.addEventListener('click', event => {
+    event.preventDefault();
+    setView('contact');
+  });
+
   homeLink.addEventListener('click', event => {
     event.preventDefault();
     setView('home');
   });
 
   window.addEventListener('popstate', () => {
-    setView(location.hash === '#artists' ? 'artists' : location.hash === '#about' ? 'about' : 'home', false);
+    setView(location.hash === '#artists' ? 'artists' : location.hash === '#about' ? 'about' : location.hash === '#contact' ? 'contact' : 'home', false);
   });
 
   if (location.hash === '#artists') setView('artists', false);
   else if (location.hash === '#about') setView('about', false);
+  else if (location.hash === '#contact') setView('contact', false);
 </script>
 </body>
 </html>
